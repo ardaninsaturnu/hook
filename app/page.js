@@ -1,101 +1,98 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <Head>
+        <title>Hook - Bringing Your Ideas to Life</title>
+        <meta name="description" content="Mobile and web development solutions" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      {/* Hero Section */}
+      <section className="hero bg-black text-white text-center py-20 opacity-0 animate-fadeIn">
+        <div className="container mx-auto">
+          <h1 className="text-6xl font-bold mb-6">Bringing Your Ideas to Life with Technology</h1>
+          <p className="text-2xl text-gray-400 mb-10">
+            Expert mobile app and web development that transforms your business.
+          </p>
+          <div className="space-x-4">
+            <Link href="/quote">
+              <span className="bg-primary text-black px-6 py-3 rounded-full hover:bg-yellow-500 font-semibold transform transition-transform duration-300 hover:scale-105">
+                Get span Quote
+              </span>
+            </Link>
+            <Link href="/services">
+              <span className="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-black font-semibold transform transition-transform duration-300 hover:scale-105">
+                Our Services
+              </span>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      
+      {/* Let's Hook the Life Section */}
+      <section className="hook-life bg-primary text-black text-center py-20 opacity-0 animate-fadeIn delay-300">
+        <div className="container mx-auto">
+          <h2 className="text-5xl font-bold mb-6">Let's Hook the Life</h2>
+          <p className="text-xl mb-8">At Hook, we're not just building apps; we're shaping the future with technology. Join us in transforming ideas into reality and creating meaningful digital experiences. It's time to hook the life!</p>
+          <Link href="/services">
+            <span className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-900 font-semibold transform transition-transform duration-300 hover:scale-105">
+              Discover Our Services
+            </span>
+          </Link>
+        </div>
+      </section>
+      
+      {/* Features Section */}
+      <section className="features py-20 bg-white text-black opacity-0 animate-fadeIn delay-500">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-12">Why Choose Hook?</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="feature-item transition-opacity duration-500 ease-in-out">
+              <h3 className="text-2xl font-bold mb-4">Fast MVP Delivery</h3>
+              <p className="text-gray-600">We specialize in delivering MVPs quickly, so you can test your ideas and launch in as little as 4-6 weeks.</p>
+            </div>
+            <div className="feature-item transition-opacity duration-500 ease-in-out">
+              <h3 className="text-2xl font-bold mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">Our apps are built to grow with your business, ensuring performance and scalability from day one.</p>
+            </div>
+            <div className="feature-item transition-opacity duration-500 ease-in-out">
+              <h3 className="text-2xl font-bold mb-4">Client-Focused Approach</h3>
+              <p className="text-gray-600">We work closely with you throughout the development process to ensure that your vision comes to life.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Projects Section */}
+      <section className="projects py-20 bg-gray-100 text-black opacity-0 animate-fadeIn delay-700">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-12">Our Projects</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="project-card bg-white p-8 shadow-lg rounded-lg border-l-4 border-primary hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+              <h3 className="text-2xl font-bold mb-4">PawBooking</h3>
+              <p className="text-gray-600">
+                A platform connecting pet owners with trusted pet hotels and services, built with React Native and Node.js.
+              </p>
+              <Link href="/projects/pawbooking">
+                <span className="text-primary hover:underline mt-4 block">Learn More</span>
+              </Link>
+            </div>
+            
+            <div className="project-card bg-white p-8 shadow-lg rounded-lg border-l-4 border-primary hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+              <h3 className="text-2xl font-bold mb-4">Custom eCommerce Solution</h3>
+              <p className="text-gray-600">
+                A fully customized eCommerce platform for span global retailer, featuring Next.js and MongoDB for scalable performance.
+              </p>
+              <Link href="/projects/ecommerce">
+                <span className="text-primary hover:underline mt-4 block">Learn More</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
